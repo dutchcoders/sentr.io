@@ -7,10 +7,10 @@ $ bundle install
 $ npm install -g grunt-cli
 $ npm install
 ```
-### Previewing
-Starts the Jekyll server on `http://localhost:4000`
+### Previewing/Development
+Starts the BrowserSync on `localhost:3000`
 
-`$ grunt jekyll:server`
+`$ grunt`
 
 ### Building
 Will build the site, putting files in the `dist` directory.
