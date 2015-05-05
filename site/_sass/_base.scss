@@ -49,6 +49,7 @@ header a {
 
 .download {
   @include button();
+  transition-property: color, border-color;
 }
 
 .header-logo {
