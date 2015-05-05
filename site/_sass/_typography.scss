@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700&subset=latin,latin-ext);
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #5c5c5c;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827em;}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 1.414em;}
+
+small, .font_small {font-size: 0.707em;}
+
+p {
+  color: #787878;
+
+}
+
+.title-copy {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
