@@ -8,39 +8,17 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-<!-- Open Graph -->
-  <meta property="og:title" content="Sentr.io" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://sentr.io" />
-  <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
-  <meta property="og:image:width" content="128" />
-  <meta property="og:image:height" content="128" />
-
-
-<!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@dutchcoders" />
-  <meta name="twitter:title" content="Sentr.io" />
-  <meta name="twitter:description" content="Add Sentr.io copy here." />
-  <meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
-  <meta name="twitter:url" content="https://www.flickr.com/photos/unicphoto/sets/72157645001703785/" />
-
-<!-- Twitter App Card -->
-  <meta name="twitter:app:country" content="US" />
-  <meta name="twitter:app:name:iphone" content="Example App" />
-  <meta name="twitter:app:id:iphone" content="306934135" />
-  <meta name="twitter:app:url:iphone" content="example://action/5149e249222f9e600a7540ef" />
-  <meta name="twitter:app:name:ipad" content="Example App" />
-  <meta name="twitter:app:id:ipad" content="306934135" />
-  <meta name="twitter:app:url:ipad" content="example://action/5149e249222f9e600a7540ef" />
-  <meta name="twitter:app:name:googleplay" content="Example App" />
-  <meta name="twitter:app:id:googleplay" content="com.example.app" />
-  <meta name="twitter:app:url:googleplay" content="http://example.com/action/5149e249222f9e600a7540ef" />
-
   <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
   <link rel="icon" href="favicon.png">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  {% include openGraph.html %}
+
+  {% include twitterCard.html %}
+
+  {% include twitterAppCard.html %}
+
+
 
 </head>

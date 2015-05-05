@@ -3,7 +3,12 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
+    watch: {
+      jekyll: {
+        files: ['site/**/*.{html,md,rb,svg,xml,yml,scss}'],
+        tasks: ['jekyll:server']
+      }
+    },
     jekyll: {
       options: {
         src: 'site'
@@ -15,8 +20,6 @@ module.exports = function(grunt) {
       },
       server: {
         options: {
-          serve: true,
-          watch: true,
           config: 'site/_config.yml',
           dest: '.jekyll'
         }
@@ -46,10 +49,29 @@ module.exports = function(grunt) {
           branch: 'build'
         }
       }
+    },
+    browserSync: {
+      server: {
+        bsFiles: {
+          src : [
+            '.jekyll/**/*.html',
+            '.jekyll/css/**/*.css',
+            '.jekyll/js/**/*.js',
+            '.jekyll/img/**/*.{gif,jpg,jpeg,png,svg}'
+          ]
+        },
+        options: {
+          server: {
+            baseDir: ".jekyll"
+          },
+          watchTask: true
+        }
+      }
     }
   });
 
-  grunt.registerTask('default', ['jekyll:server']);
+  grunt.registerTask('default', ['browserSync','watch']);
+
   grunt.registerTask('build', [
     'jekyll:dist'
   ]);
@@ -63,4 +85,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-build-control');
+  grunt.loadNpmTasks('grunt-browser-sync');
 };
