@@ -1,10 +1,14 @@
+* {
+  outline: none;
+}
+
 $transition-props: .3s cubic-bezier(.65, .05, .36, 1);
 
 @mixin button($radius: 5px, $color: $trans-white) {
   border: 2px solid $color;
   border-radius: $radius;
   transition: border-color $transition-props;
-  padding: 4px 8px;
+  padding: 8px 16px;
 
   &:hover {
     border-color: opacify($color, .3);

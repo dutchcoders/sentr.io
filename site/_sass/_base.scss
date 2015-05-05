@@ -11,16 +11,17 @@
 }
 
 header a {
+  @extend .font-small;
   color: $trans-white;
-  font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color $transition-props;
 
   &:hover {
     color: opacify($trans-white, .5);
-    transition: color $transition-props;
+
   }
 }
 
@@ -59,6 +60,7 @@ header a {
   text-indent: 100%;
   white-space: nowrap;
   width: 58px;
+
   @media all and (-webkit-min-device-pixel-ratio: 2) {
     background-image: url('../img/logo@2x.png');
     background-size: contain;
