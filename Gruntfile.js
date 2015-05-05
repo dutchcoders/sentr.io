@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com/dutchcoders/sentr.io.git',
+          remote: 'git@github.com:dutchcoders/sentr.io.git',
           branch: 'gh-pages'
         }
       },
