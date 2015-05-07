@@ -1,17 +1,30 @@
+%container,
 .container {
-  margin: 0 auto;
+  margin: 0 auto 2em;
   max-width: 966px;
-  padding: 0 15px;
+  padding: 2em 15px 0;
 }
 
 #header {
-  background-color: $blue;
-  height: 300px;
+  $trans-blue: transparentize($blue, .2);
+  background: linear-gradient($trans-blue, $trans-blue), url(../img/bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 50vh;
+  min-height: 128px;
   overflow: hidden;
+
+  .container {
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  h1 {
+    margin: 32px 0 0;
+  }
 }
 
 header a {
-  @extend .font-small;
+  @extend %font-small;
   color: $trans-white;
   font-weight: 700;
   line-height: 1.2em;
@@ -31,8 +44,8 @@ header a {
   text-transform: uppercase;
 
   ul {
-    padding: 0;
     list-style-type: none;
+    padding: 0;
   }
 
   li {
@@ -66,4 +79,65 @@ header a {
     background-image: url('../img/logo@2x.png');
     background-size: contain;
   }
+}
+
+.info,
+.illustration,
+.signup {
+  @extend %container;
+  border-top: 1px solid #efefef;
+}
+
+.info {
+  h2 {
+    margin-top: .15em;
+  }
+
+  &.orange {
+    background-color: $orange;
+    box-sizing: content-box;
+    max-width: 100%;
+    padding: 32px;
+
+    h3,
+    p {
+      color: white;
+    }
+
+    +.info,
+    +.illustration {
+      border-top: 0;
+    }
+  }
+
+  &.small {
+    h3,
+    p {
+      margin: 0 auto 1em;
+      text-align: center;
+    }
+  }
+}
+
+.illustration {
+  overflow: auto;
+  max-width: 75vw;
+  margin-bottom: 1px solid $light-grey;
+
+  figure {
+    display: block;
+    float: left;
+    padding: 30px;
+    width: 33vw;
+  }
+
+  &.right {
+    figure {
+      float: right;
+    }
+  }
+}
+
+form {
+  text-align: center;
 }

@@ -14,3 +14,23 @@ $transition-props: .3s cubic-bezier(.65, .05, .36, 1);
     border-color: opacify($color, .3);
   }
 }
+
+input,
+input+button {
+  border: 2px solid $blue;
+  margin: 0;
+  padding: 4px 8px;
+}
+
+input {
+  border: 2px solid $blue;
+  border-radius: 5px 0 0 5px;
+  margin: 0;
+}
+
+input+button {
+  background-color: $blue;
+  color: white;
+  margin-left: -4px;
+  border-radius: 0 5px 5px 0;
+}
