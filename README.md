@@ -17,7 +17,7 @@ Will build the site, putting files in the `dist` directory.
 
 `$ grunt build`
 
-### Deplying
+### Deploying
 Will build and deploy to gh-pages.
 
 `$ grunt deploy`
