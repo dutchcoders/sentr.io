@@ -228,14 +228,33 @@ input + button {
 #header {
   background: linear-gradient(rgba(48, 50, 58, 0.8), rgba(48, 50, 58, 0.8)), url(../img/bg.jpg) center center no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 40vh;
   min-height: 128px;
   overflow: hidden; }
   #header .container {
+    box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 15px; }
+    padding: 25px;
+    height: 10vh;
+    clear: both; }
   #header h1 {
-    margin: 32px 0 0; }
+    margin: 0; }
+  #header .hero-text {
+    display: table;
+    height: 30vh;
+    padding: 0; }
+  #header p {
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2em;
+    color: #fff; }
+  @media screen and (max-width: 480px) {
+    #header h1 {
+      margin-bottom: .5em; }
+    #header p {
+      display: none; } }
 
 header a {
   color: rgba(255, 255, 255, 0.45);
@@ -251,6 +270,17 @@ header a {
   display: block;
   float: right;
   text-transform: uppercase; }
+  @media screen and (max-width: 480px) {
+    .main-nav {
+      float: none; }
+      .main-nav ul {
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content; }
+      .main-nav li {
+        display: inline-block;
+        float: none;
+        padding-left: 20px; } }
   .main-nav ul {
     list-style-type: none;
     padding: 0; }
@@ -280,6 +310,11 @@ header a {
   text-indent: 100%;
   white-space: nowrap;
   width: 58px; }
+  @media screen and (max-width: 480px) {
+    .header-logo {
+      clear: both;
+      float: none;
+      margin: 0 auto; } }
   @media all and (-webkit-min-device-pixel-ratio: 2) {
     .header-logo {
       background-image: url("../img/logo@2x.png");
@@ -317,8 +352,22 @@ header a {
     float: left;
     padding: 30px;
     width: 33vw; }
+    .illustration figure img {
+      width: 100%;
+      height: auto; }
   .illustration.right figure {
     float: right; }
+  @media screen and (max-width: 600px) {
+    .illustration {
+      text-align: center; }
+      .illustration h3 {
+        margin-top: .5em; }
+      .illustration figure {
+        display: block;
+        clear: both;
+        width: 100%; }
+      .illustration.right figure {
+        float: none; } }
 
 form {
   text-align: center; }
