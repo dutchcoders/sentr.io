@@ -70,16 +70,16 @@ header a {
   text-transform: uppercase;
   @media screen and (max-width: 480px) {
     float: none;
+
     ul {
-      text-align: center;
       margin: 0 auto;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
+      text-align: center;
       width: fit-content;
     }
+
     li {
-      float: none;
       display: inline-block;
+      float: none;
       padding-left: 20px;
     }
   }
@@ -175,6 +175,10 @@ header a {
     float: left;
     padding: 30px;
     width: 33vw;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &.right {
