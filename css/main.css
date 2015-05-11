@@ -252,9 +252,7 @@ input + button {
     color: #fff; }
   @media screen and (max-width: 480px) {
     #header h1 {
-      margin-bottom: .5em; }
-    #header p {
-      display: none; } }
+      margin-bottom: .5em; } }
 
 header a {
   color: rgba(255, 255, 255, 0.45);
